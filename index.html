@@ -16,18 +16,25 @@
     </nav>
 </header>
 <div class="center-container">
-    <form action="upload.php" method="POST" enctype="multipart/form-data">
-        <button type="button" class="round-button">
+    <form action="upload.php"method="POST" enctype="multipart/form-data">
+        <button class="round-button">
             <img src="assets/images/icon.png" alt="Icon" class="button-icon">
         </button>
         <div class="browse-container">
             <label for="file" class="browse-button"></label>
             <input type="file" name="file" id="file" required>
+            <span id="file-name" class="file-name"></span>
         </div>
     </form>
 </div>
 <div class="wave-container">
     <img src="assets/images/wave.png" alt="Wave decoration" class="wave-image">
 </div>
+<script>
+    document.getElementById('file').addEventListener('change', function() {
+        const fileName = this.files[0] ? this.files[0].name : '';
+        document.getElementById('file-name').textContent = fileName;
+    });
+</script>
 </body>
 </html>

@@ -162,9 +162,18 @@ input[type="file"] {
 
 .browse-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    gap: 10px;
+}
+
+.file-name {
+    color: #83df69;
+    font-size: 16px;
+    margin-top: 5px;
+    min-height: 20px;
 }
 
 /* On peut retirer margin-top du browse-button puisqu'il est maintenant géré par le conteneur */
